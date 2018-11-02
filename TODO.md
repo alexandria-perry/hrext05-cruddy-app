@@ -32,4 +32,6 @@
 - [ ] bootstrap/material (css library)
 
 #### My Spin
-(to be filled out by you)
+[X] design
+[X] color
+[X] uses SVG's and google fonts for later UX/UI use
