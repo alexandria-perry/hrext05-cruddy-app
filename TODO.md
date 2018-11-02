@@ -32,6 +32,7 @@
 - [ ] bootstrap/material (css library)
 
 #### My Spin
+[X] Made a Bucket List App for Travel :)
 [X] design
 [X] color
 [X] uses SVG's and google fonts for later UX/UI use
