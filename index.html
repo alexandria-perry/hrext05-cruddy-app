@@ -1,15 +1,43 @@
 <!DOCTYPE html>
-<html>
+<html> 
   <head>
-    <title>HREXT05 Cruddy App</title>
+    <title>Cruddy App</title>
+  <!-- Font -->
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+  <!-- stylesheet -->
+    <link rel="stylesheet" type="text/css" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="app.js"></script>
-    <link rel="stylesheet" href="app.css">
+
   </head>
   <body>
-    <input type="text" class="text-input" id="theKey" placeholder="Enter some text">
-    <button class="add-text-btn">Add text</button>
-    <button class="clear-cache-btn">Clear Entries</button>
-    <div class="show-text"></div>
+    <header>
+      <input type="text" placeholder="Take Me To..." id="item">
+      <button id="add">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 80" x="0px" y="0px"><g data-name="Layer 1"><path d="M39.862,8.493A1,1,0,0,0,39,8H35a1,1,0,0,0-.6.2L22.667,17h-7.18A14.145,14.145,0,0,0,2.051,26.684,1,1,0,0,0,2,27a3,3,0,0,0,3,3H25.7l8.748,5.832A1.006,1.006,0,0,0,35,36h4a1,1,0,0,0,.743-1.669l-3.935-4.373a37.624,37.624,0,0,0,15.333-3.911l2.353-1.176,7.112,3.048a1,1,0,0,0,1.1-1.626L57.774,22.36l3.907-3.627A1,1,0,0,0,61,17h-.858L61.991,3.132A1,1,0,0,0,61,2H57a1,1,0,0,0-.832.445L46.465,17H35.7l4.175-7.514A1,1,0,0,0,39.862,8.493ZM51.872,22h2.714l2.035,2.035Zm4.487-1.055-.652-.652A1,1,0,0,0,55,20H47a1,1,0,0,0-.394,1.919l4.48,1.92-.839.419A35.619,35.619,0,0,1,34.4,28h-.353l-1.373-1.525-1.929-2.144-1.486,1.338.9,1h0L32.2,28.94,36.755,34H35.3l-8.748-5.832-6-4-1.11,1.664L22.7,28H5a1,1,0,0,1-.99-.862A12.135,12.135,0,0,1,6.471,23H13V21H8.814a12.139,12.139,0,0,1,6.673-2H58.454ZM57.535,4h2.323L58.125,17H48.868ZM33.412,17H26l9.333-7H37.3Z"/><rect x="16" y="21" width="2" height="2"/><rect x="20" y="21" width="2" height="2"/><rect x="24" y="21" width="2" height="2"/><rect x="28" y="21" width="2" height="2"/><rect x="32" y="21" width="2" height="2"/><path d="M32,38A12,12,0,1,0,44,50,12.013,12.013,0,0,0,32,38Zm8.734,7.142a18.317,18.317,0,0,0-2.49-.629,13.354,13.354,0,0,0-1.421-3.267A10.073,10.073,0,0,1,40.734,45.142ZM22,50a9.95,9.95,0,0,1,.251-2.2,10.091,10.091,0,0,1,3.019-1.142A20.8,20.8,0,0,0,25,50a21.142,21.142,0,0,0,.127,2.3,9.293,9.293,0,0,1-3.069-1.235A10.06,10.06,0,0,1,22,50Zm5,0a18.4,18.4,0,0,1,.376-3.721A34.355,34.355,0,0,1,31,46.02v6.959a33.674,33.674,0,0,1-3.8-.288A18.74,18.74,0,0,1,27,50Zm6-9.789c1.232.523,2.31,1.993,3.036,3.987-1.086-.112-2.127-.164-3.036-.185Zm-2,0v3.8c-.909.021-1.95.073-3.036.185C28.69,42.2,29.768,40.734,31,40.211Zm0,14.776v4.8c-1.437-.611-2.669-2.5-3.373-5.024C28.83,54.9,29.991,54.964,31,54.987Zm2,4.8v-4.8c1.009-.023,2.17-.085,3.373-.222C35.669,57.286,34.437,59.178,33,59.789Zm0-6.81V46.02a34.355,34.355,0,0,1,3.624.259A18.4,18.4,0,0,1,37,50a18.74,18.74,0,0,1-.2,2.691A33.674,33.674,0,0,1,33,52.979Zm5.73-6.318A10.091,10.091,0,0,1,41.749,47.8,9.95,9.95,0,0,1,42,50a10.06,10.06,0,0,1-.058,1.061A9.293,9.293,0,0,1,38.873,52.3,21.142,21.142,0,0,0,39,50,20.8,20.8,0,0,0,38.73,46.661ZM27.177,41.246a13.354,13.354,0,0,0-1.421,3.267,18.317,18.317,0,0,0-2.49.629A10.073,10.073,0,0,1,27.177,41.246Zm-4.48,12.4a16.321,16.321,0,0,0,2.786.791,14.158,14.158,0,0,0,1.694,4.32A10.044,10.044,0,0,1,22.7,53.643Zm14.126,5.111a14.158,14.158,0,0,0,1.694-4.32,16.321,16.321,0,0,0,2.786-.791A10.044,10.044,0,0,1,36.823,58.754Z"/><path d="M56,48H54v2h2a5,5,0,0,0,0-10H47.5a2.5,2.5,0,0,1,0-5h7A4.505,4.505,0,0,0,59,30.5V29H57v1.5A2.5,2.5,0,0,1,54.5,33h-7a4.5,4.5,0,0,0,0,9H56a3,3,0,0,1,0,6Z"/><rect x="50" y="48" width="2" height="2"/><rect x="46" y="48" width="2" height="2"/></g></svg>
+      </button>
+    </header>
+      <div class="container" 
+      > 
+        <ul class="todo" id="todo" contenteditable="true">
+  <!--         <li>
+            <div class="buttons">
+              <button class="remove">
+                <svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" viewBox="0 0 96.000001 120.0000025" version="1.1" x="0px" y="0px"><g transform="translate(0,-956.36216)"><path d="m 80.67476,972.04099 0,0 -64.495966,64.49591 0,0 z" style="opacity:1;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1.00000012;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"/><path d="m 79.747979,1036.5369 0,0 -64.495959,-64.49591 0,0 z" style="opacity:1;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1.00000012;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"/></g></svg>
+              </button>
+              <button class="complete">
+                <svg></svg> -->
+        </ul>
+
+
+        <button id="clear">Clear</button>
+            <button id="save">Save</button>
+      </div>
+    <script src="app.js"></script>
   </body>
 </html>
+
+
+
+
+
+
